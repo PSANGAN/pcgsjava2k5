@@ -1,5 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Compare/AgeComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Compare/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/GenericPoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/Container.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/GenericMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/SimpleContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/BigOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/oops/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/oops/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3686ktA3eovUS9zkif5Zg8qCA2K" />
-  <component name="PropertiesComponent">{}</component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.RunApp.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.SimpleOne.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.RunApp">
+    <configuration name="RunApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.pcgs.core.java.pocs.App" />
+      <module name="JavaPoC" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pcgs.core.java.pocs.collections.SimpleOne" />
+      <module name="JavaPoC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pcgs.core.java.pocs.collections.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpleOne" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="" />
+      <created>1764375999718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764375999718</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="List.of(5, 6, &quot;four&quot;)" />
+      </configuration>
+    </watches-manager>
+  </component>
 </project>
