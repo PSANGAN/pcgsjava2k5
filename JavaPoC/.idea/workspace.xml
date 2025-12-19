@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Compare/AgeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Compare/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/GenericPoC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/Box.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/Container.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/GenericMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/Generics/SimpleContainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/BigOClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/oops/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/oops/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/DNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/DoublyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/SinglyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,17 +38,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.RunApp.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.SimpleOne.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RunApp.executor": "Run",
+    "Application.SimpleOne.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/PGS/GitHub/VersionCntrl/Java25/JavaPoC"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.RunApp">
     <configuration name="RunApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.pcgs.core.java.pocs.App" />
@@ -102,10 +95,14 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="5" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/SinglyLinkedList.java</url>
+          <line>69</line>
+          <properties class="com.pcgs.core.java.pocs.algo.SinglyLinkedList" method="delete">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
