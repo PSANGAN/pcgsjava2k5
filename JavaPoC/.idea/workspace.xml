@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/DNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/DoublyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/SinglyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
