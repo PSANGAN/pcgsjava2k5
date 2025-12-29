@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="" />
+    <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/ChatGptBinary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/ICollectionPoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/IDequePoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/IListPoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/IMapPoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/IQueuePoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/ISetPoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/ListImplementationsGuide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/MapImplementationGuide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/SetImplementationsGuide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/lambda/LambdaPoC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/lambda/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/lambda/VariableCapture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,18 +47,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.RunApp.executor": "Run",
-    "Application.SimpleOne.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/PGS/GitHub/VersionCntrl/Java25/JavaPoC"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BinarySearchTree.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ICollectionPoC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IDequePoC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IListPoC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IMapPoC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IQueuePoC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ISetPoC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LambdaPoC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ListImplementationsGuide.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MapImplementationGuide.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RunApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SetImplementationsGuide.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SimpleOne.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VariableCapture.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/PGS/GitHub/VersionCntrl/Java25/JavaPoC&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.RunApp">
     <configuration name="RunApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.pcgs.core.java.pocs.App" />
@@ -97,6 +124,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/lambda/VariableCapture.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

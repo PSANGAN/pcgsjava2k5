@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -51,6 +52,9 @@ public class App
         list.delete(20);
         list.displayForward();
         list.displayBackward();
+
+        IntFunction<String> dowork =(x)-> Integer.valueOf(x).toString();
+        dowork.apply(10);
     }
 
     private void dummy(){
