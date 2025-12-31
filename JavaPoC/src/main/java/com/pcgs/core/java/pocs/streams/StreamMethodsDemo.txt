@@ -1,0 +1,431 @@
+package com.pcgs.core.java.pocs.streams;
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamMethodsDemo {
+
+    public static void main(String[] args) {
+        System.out.println("=== PEEK METHOD ===");
+        peekExample();
+
+        System.out.println("\n=== FOREACH & FOREACHORDERED ===");
+        forEachExamples();
+
+        System.out.println("\n=== MAP METHOD ===");
+        mapExample();
+
+        System.out.println("\n=== FLATMAP METHOD ===");
+        flatMapExample();
+
+        System.out.println("\n=== SKIP & LIMIT ===");
+        skipLimitExample();
+
+        System.out.println("\n=== DROPWHILE & TAKEWHILE ===");
+        dropTakeWhileExample();
+
+        System.out.println("\n=== AGGREGATE OPERATIONS ===");
+        aggregateOperations();
+
+        System.out.println("\n=== REDUCE METHOD ===");
+        reduceExample();
+
+        System.out.println("\n=== COLLECT METHOD ===");
+        collectExample();
+    }
+
+    // 1. PEEK - intermediate operation for debugging/side effects
+    static void peekExample() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+        // peek() allows you to perform an action on each element
+        // without modifying the stream - useful for debugging
+        List<Integer> result = numbers.stream()
+                .peek(n -> System.out.println("Before filter: " + n))
+                .filter(n -> n % 2 == 0)
+                .peek(n -> System.out.println("After filter: " + n))
+                .map(n -> n * 10)
+                .peek(n -> System.out.println("After map: " + n))
+                .collect(Collectors.toList());
+
+        System.out.println("Final result: " + result);
+
+        // Another example: logging processing stages
+        List<String> names = Arrays.asList("alice", "bob", "charlie");
+        names.stream()
+                .peek(name -> System.out.println("Original: " + name))
+                .map(String::toUpperCase)
+                .peek(name -> System.out.println("Uppercase: " + name))
+                .filter(name -> name.length() > 3)
+                .forEach(name -> System.out.println("Final: " + name));
+    }
+
+    // 2. FOREACH & FOREACHORDERED
+    static void forEachExamples() {
+        List<String> fruits = Arrays.asList("Apple", "Banana", "Cherry",
+                "Date", "Elderberry");
+
+        // forEach() - terminal operation, order not guaranteed in parallel
+        System.out.println("forEach:");
+        fruits.stream().forEach(f -> System.out.print(f + " "));
+
+        System.out.println("\n\nforEachOrdered:");
+        // forEachOrdered() - maintains encounter order even in parallel
+        fruits.parallelStream()
+                .forEachOrdered(f -> System.out.print(f + " "));
+
+        System.out.println("\n\nParallel forEach (unordered):");
+        fruits.parallelStream()
+                .forEach(f -> System.out.print(f + " "));
+
+        // Practical example with index
+        System.out.println("\n\nWith index:");
+        IntStream.range(0, fruits.size())
+                .forEach(i -> System.out.println(i + ": " + fruits.get(i)));
+    }
+
+    // 3. MAP - transform each element
+    static void mapExample() {
+        List<String> names = Arrays.asList("John", "Jane", "Jack");
+
+        // Transform strings to their lengths
+        List<Integer> lengths = names.stream()
+                .map(String::length)
+                .collect(Collectors.toList());
+        System.out.println("Name lengths: " + lengths);
+
+        // Transform to uppercase
+        List<String> uppercase = names.stream()
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());
+        System.out.println("Uppercase: " + uppercase);
+
+        // Map to custom objects
+        List<Person> people = names.stream()
+                .map(name -> new Person(name, name.length() * 10))
+                .collect(Collectors.toList());
+        System.out.println("People: " + people);
+
+        // Multiple transformations
+        List<String> transformed = names.stream()
+                .map(String::toUpperCase)
+                .map(s -> s + "!")
+                .map(s -> "Hello, " + s)
+                .collect(Collectors.toList());
+        System.out.println("Transformed: " + transformed);
+    }
+
+    // 4. FLATMAP - flatten nested structures
+    static void flatMapExample() {
+        // Example 1: List of lists
+        List<List<Integer>> listOfLists = Arrays.asList(
+                Arrays.asList(1, 2, 3),
+                Arrays.asList(4, 5),
+                Arrays.asList(6, 7, 8, 9)
+        );
+
+        List<Integer> flattened = listOfLists.stream()
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+        System.out.println("Flattened: " + flattened);
+
+        // Example 2: String to characters
+        List<String> words = Arrays.asList("Hello", "World");
+        List<String> letters = words.stream()
+                .flatMap(word -> Arrays.stream(word.split("")))
+                .collect(Collectors.toList());
+        System.out.println("Letters: " + letters);
+
+        // Example 3: Objects with collections
+        List<Department> departments = Arrays.asList(
+                new Department("IT", Arrays.asList("Alice", "Bob", "Charlie")),
+                new Department("HR", Arrays.asList("David", "Eve")),
+                new Department("Sales", Arrays.asList("Frank", "Grace", "Henry"))
+        );
+
+        List<String> allEmployees = departments.stream()
+                .flatMap(dept -> dept.getEmployees().stream())
+                .collect(Collectors.toList());
+        System.out.println("All employees: " + allEmployees);
+
+        // Example 4: Optional flatMap
+        List<String> numbers = Arrays.asList("1", "2", "not-a-number", "3");
+        List<Integer> validNumbers = numbers.stream()
+                .flatMap(s -> parseInteger(s).stream())
+                .collect(Collectors.toList());
+        System.out.println("Valid numbers: " + validNumbers);
+    }
+
+    // 5. SKIP & LIMIT
+    static void skipLimitExample() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        // skip() - skip first n elements
+        List<Integer> skipped = numbers.stream()
+                .skip(3)
+                .collect(Collectors.toList());
+        System.out.println("Skip first 3: " + skipped);
+
+        // limit() - take only first n elements
+        List<Integer> limited = numbers.stream()
+                .limit(5)
+                .collect(Collectors.toList());
+        System.out.println("Limit to 5: " + limited);
+
+        // Combining skip and limit (pagination)
+        int pageSize = 3;
+        int pageNumber = 2; // zero-indexed
+        List<Integer> page = numbers.stream()
+                .skip(pageNumber * pageSize)
+                .limit(pageSize)
+                .collect(Collectors.toList());
+        System.out.println("Page 2 (size 3): " + page);
+
+        // Real-world example: Get top 5 after removing worst 2
+        List<Integer> scores = Arrays.asList(45, 52, 78, 89, 92, 95, 98);
+        List<Integer> topScores = scores.stream()
+                .sorted(Comparator.reverseOrder())
+                .skip(2)
+                .limit(5)
+                .collect(Collectors.toList());
+        System.out.println("Top 5 scores (excluding best 2): " + topScores);
+    }
+
+    // 6. DROPWHILE & TAKEWHILE (Java 9+)
+    static void dropTakeWhileExample() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 3, 2, 1);
+
+        // takeWhile() - take elements WHILE condition is true
+        // Stops at first false
+        List<Integer> taken = numbers.stream()
+                .takeWhile(n -> n < 5)
+                .collect(Collectors.toList());
+        System.out.println("takeWhile(< 5): " + taken); // [1, 2, 3, 4]
+
+        // dropWhile() - drop elements WHILE condition is true
+        // Returns remaining elements after first false
+        List<Integer> dropped = numbers.stream()
+                .dropWhile(n -> n < 5)
+                .collect(Collectors.toList());
+        System.out.println("dropWhile(< 5): " + dropped); // [5, 3, 2, 1]
+
+        // Difference between filter and takeWhile
+        System.out.println("\nDifference: filter vs takeWhile");
+        List<Integer> filtered = numbers.stream()
+                .filter(n -> n < 5)
+                .collect(Collectors.toList());
+        System.out.println("filter(< 5): " + filtered); // [1, 2, 3, 4, 3, 2, 1]
+        System.out.println("takeWhile(< 5): " + taken);  // [1, 2, 3, 4]
+
+        // Practical example: process until sentinel value
+        List<String> logs = Arrays.asList("INFO", "DEBUG", "WARN",
+                "ERROR", "WARN", "INFO");
+        List<String> beforeError = logs.stream()
+                .takeWhile(log -> !log.equals("ERROR"))
+                .collect(Collectors.toList());
+        System.out.println("Logs before ERROR: " + beforeError);
+    }
+
+    // 7. AGGREGATE OPERATIONS (sum, max, min, count, average)
+    static void aggregateOperations() {
+        List<Integer> numbers = Arrays.asList(10, 20, 30, 40, 50);
+
+        // count() - count elements
+        long count = numbers.stream().count();
+        System.out.println("Count: " + count);
+
+        // For primitive streams: sum, max, min, average
+        IntStream intStream = numbers.stream().mapToInt(Integer::intValue);
+
+        int sum = numbers.stream().mapToInt(Integer::intValue).sum();
+        System.out.println("Sum: " + sum);
+
+        OptionalInt max = numbers.stream().mapToInt(Integer::intValue).max();
+        System.out.println("Max: " + max.getAsInt());
+
+        OptionalInt min = numbers.stream().mapToInt(Integer::intValue).min();
+        System.out.println("Min: " + min.getAsInt());
+
+        OptionalDouble average = numbers.stream()
+                .mapToInt(Integer::intValue)
+                .average();
+        System.out.println("Average: " + average.getAsDouble());
+
+        // For object streams, use max/min with Comparator
+        List<Person> people = Arrays.asList(
+                new Person("Alice", 30),
+                new Person("Bob", 25),
+                new Person("Charlie", 35)
+        );
+
+        Optional<Person> oldest = people.stream()
+                .max(Comparator.comparing(Person::getAge));
+        System.out.println("Oldest: " + oldest.get());
+
+        Optional<Person> youngest = people.stream()
+                .min(Comparator.comparing(Person::getAge));
+        System.out.println("Youngest: " + youngest.get());
+    }
+
+    // 8. REDUCE - fold/accumulate stream to single value
+    static void reduceExample() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+        // reduce with identity and accumulator
+        Integer sum = numbers.stream()
+                .reduce(0, (a, b) -> a + b);
+        System.out.println("Sum using reduce: " + sum);
+
+        // reduce with method reference
+        Integer product = numbers.stream()
+                .reduce(1, (a, b) -> a * b);
+        System.out.println("Product: " + product);
+
+        // reduce without identity (returns Optional)
+        Optional<Integer> maxOptional = numbers.stream()
+                .reduce((a, b) -> a > b ? a : b);
+        System.out.println("Max: " + maxOptional.get());
+
+        // String concatenation
+        List<String> words = Arrays.asList("Java", "Stream", "API");
+        String concatenated = words.stream()
+                .reduce("", (a, b) -> a + " " + b).trim();
+        System.out.println("Concatenated: " + concatenated);
+
+        // Complex reduce: sum of ages
+        List<Person> people = Arrays.asList(
+                new Person("Alice", 30),
+                new Person("Bob", 25),
+                new Person("Charlie", 35)
+        );
+
+        int totalAge = people.stream()
+                .map(Person::getAge)
+                .reduce(0, Integer::sum);
+        System.out.println("Total age: " + totalAge);
+
+        // Three-argument reduce (for parallel streams)
+        Integer parallelSum = numbers.parallelStream()
+                .reduce(0,
+                        (a, b) -> a + b,  // accumulator
+                        (a, b) -> a + b); // combiner
+        System.out.println("Parallel sum: " + parallelSum);
+    }
+
+    // 9. COLLECT - mutable reduction
+    static void collectExample() {
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie",
+                "David", "Alice", "Eve");
+
+        // Collect to List
+        List<String> list = names.stream()
+                .filter(n -> n.length() > 3)
+                .collect(Collectors.toList());
+        System.out.println("To List: " + list);
+
+        // Collect to Set (removes duplicates)
+        Set<String> set = names.stream()
+                .collect(Collectors.toSet());
+        System.out.println("To Set: " + set);
+
+        // Collect to specific collection
+        TreeSet<String> treeSet = names.stream()
+                .collect(Collectors.toCollection(TreeSet::new));
+        System.out.println("To TreeSet: " + treeSet);
+
+        // Collect to Map
+        List<Person> people = Arrays.asList(
+                new Person("Alice", 30),
+                new Person("Bob", 25),
+                new Person("Charlie", 35)
+        );
+
+        Map<String, Integer> nameToAge = people.stream()
+                .collect(Collectors.toMap(
+                        Person::getName,
+                        Person::getAge
+                ));
+        System.out.println("To Map: " + nameToAge);
+
+        // Joining strings
+        String joined = names.stream()
+                .collect(Collectors.joining(", "));
+        System.out.println("Joined: " + joined);
+
+        String withPrefixSuffix = names.stream()
+                .collect(Collectors.joining(", ", "[", "]"));
+        System.out.println("With prefix/suffix: " + withPrefixSuffix);
+
+        // Grouping by
+        Map<Integer, List<String>> byLength = names.stream()
+                .collect(Collectors.groupingBy(String::length));
+        System.out.println("Grouped by length: " + byLength);
+
+        // Partitioning by
+        Map<Boolean, List<String>> partitioned = names.stream()
+                .collect(Collectors.partitioningBy(n -> n.length() > 4));
+        System.out.println("Partitioned: " + partitioned);
+
+        // Counting
+        Map<String, Long> frequency = names.stream()
+                .collect(Collectors.groupingBy(
+                        name -> name,
+                        Collectors.counting()
+                ));
+        System.out.println("Frequency: " + frequency);
+
+        // Summarizing statistics
+        IntSummaryStatistics stats = people.stream()
+                .collect(Collectors.summarizingInt(Person::getAge));
+        System.out.println("Age statistics: " + stats);
+
+        // Custom collector
+        String custom = names.stream()
+                .collect(Collectors.collectingAndThen(
+                        Collectors.joining(", "),
+                        s -> "Names: " + s
+                ));
+        System.out.println(custom);
+    }
+
+    // Helper method
+    static Optional<Integer> parseInteger(String s) {
+        try {
+            return Optional.of(Integer.parseInt(s));
+        } catch (NumberFormatException e) {
+            return Optional.empty();
+        }
+    }
+}
+
+// Supporting classes
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() { return name; }
+    public int getAge() { return age; }
+
+    @Override
+    public String toString() {
+        return name + "(" + age + ")";
+    }
+}
+
+class Department {
+    private String name;
+    private List<String> employees;
+
+    public Department(String name, List<String> employees) {
+        this.name = name;
+        this.employees = employees;
+    }
+
+    public String getName() { return name; }
+    public List<String> getEmployees() { return employees; }
+}
