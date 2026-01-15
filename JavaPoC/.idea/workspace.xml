@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/DirectoryContentAnalyserOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/FactorialRecursion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/FibonacciComparison.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/LinearSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/CountingSortClaude.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/MergeSortClaude.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/QuickSortClaude.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/RadixSortClaude.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/bubblesortpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/challenge1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/challenge2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/challenge3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/countingsortpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/insertionsortpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/mergesortpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/radixsortpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/recursionpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/selectionsortpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/shellsortpcgs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,42 +48,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BinarySearch.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BinarySearchTree.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CollectorArchitectureDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DirectoryContentAnalyserOne.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FactorialRecursion.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FibonacciComparison.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ICollectionPoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.IDequePoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.IListPoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.IMapPoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.IQueuePoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ISetPoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LambdaPoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LinearSearch.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ListImplementationsGuide.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MapImplementationGuide.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OptionalDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.QuickSort.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RunApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SetImplementationsGuide.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SimpleOne.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StreamInterviewGuide.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StreamMethodsDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StreamPoC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.VariableCapture.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/PGS/GitHub/VersionCntrl/Java25/JavaPoC&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BinarySearch.executor": "Run",
+    "Application.BinarySearchTree.executor": "Run",
+    "Application.CollectorArchitectureDemo.executor": "Run",
+    "Application.CountingSortClaude.executor": "Run",
+    "Application.DirectoryContentAnalyserOne.executor": "Run",
+    "Application.FactorialRecursion.executor": "Run",
+    "Application.FibonacciComparison.executor": "Run",
+    "Application.ICollectionPoC.executor": "Run",
+    "Application.IDequePoC.executor": "Run",
+    "Application.IListPoC.executor": "Run",
+    "Application.IMapPoC.executor": "Run",
+    "Application.IQueuePoC.executor": "Run",
+    "Application.ISetPoC.executor": "Run",
+    "Application.LambdaPoC.executor": "Run",
+    "Application.LinearSearch.executor": "Run",
+    "Application.ListImplementationsGuide.executor": "Run",
+    "Application.MapImplementationGuide.executor": "Run",
+    "Application.MergeSortClaude.executor": "Run",
+    "Application.OptionalDemo.executor": "Run",
+    "Application.QuickSort.executor": "Run",
+    "Application.QuickSortClaude.executor": "Run",
+    "Application.RadixSortClaude.executor": "Run",
+    "Application.RunApp.executor": "Run",
+    "Application.SetImplementationsGuide.executor": "Run",
+    "Application.SimpleOne.executor": "Run",
+    "Application.StreamInterviewGuide.executor": "Run",
+    "Application.StreamMethodsDemo.executor": "Run",
+    "Application.StreamPoC.executor": "Run",
+    "Application.VariableCapture.executor": "Debug",
+    "Application.bubblesortpcgs.executor": "Debug",
+    "Application.challenge1.executor": "Run",
+    "Application.challenge2.executor": "Run",
+    "Application.challenge3.executor": "Run",
+    "Application.countingsortpcgs.executor": "Run",
+    "Application.insertionsortpcgs.executor": "Run",
+    "Application.mergesortpcgs.executor": "Run",
+    "Application.radixsortpcgs.executor": "Run",
+    "Application.recursionpcgs.executor": "Run",
+    "Application.selectionsortpcgs.executor": "Debug",
+    "Application.shellsortpcgs.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/PGS/GitHub/VersionCntrl/Java25/JavaPoC"
   }
-}</component>
-  <component name="RunManager" selected="Application.RunApp">
+}]]></component>
+  <component name="RunManager">
     <configuration name="RunApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.pcgs.core.java.pocs.App" />
       <module name="JavaPoC" />
@@ -132,6 +156,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/lambda/VariableCapture.java</url>
           <line>24</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/bubblesortpcgs.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/bubblesortpcgs.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/selectionsortpcgs.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
