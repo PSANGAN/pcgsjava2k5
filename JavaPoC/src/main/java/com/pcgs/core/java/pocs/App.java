@@ -3,12 +3,11 @@ package com.pcgs.core.java.pocs;
 import com.pcgs.core.java.pocs.Compare.AgeComparator;
 import com.pcgs.core.java.pocs.Compare.Person;
 import com.pcgs.core.java.pocs.algo.DoublyLinkedList;
+import com.pcgs.core.java.pocs.algo.Employee;
 import com.pcgs.core.java.pocs.algo.SinglyLinkedList;
+import com.pcgs.core.java.pocs.collections.EmployeeLinkedList;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -21,40 +20,100 @@ public class App
 {
     public static void main( String[] args )
     {
-        DoublyLinkedList list = new DoublyLinkedList();
+//        DoublyLinkedList list = new DoublyLinkedList();
+//
+//        System.out.println("=== Doubly Linked List Demo ===\n");
+//
+//        // Append operations
+//        list.append(10);
+//        list.append(20);
+//        list.append(30);
+//        list.displayForward();
+//        list.displayBackward();
+//
+//        System.out.println();
+//
+//        // Prepend operations
+//        list.prepend(5);
+//        list.prepend(1);
+//        list.displayForward();
+//        list.displayBackward();
+//
+//        System.out.println();
+//
+//        // Insert after
+//        list.insertAfter(20, 25);
+//        list.displayForward();
+//
+//        System.out.println();
+//
+//        // Delete operation
+//        list.delete(20);
+//        list.displayForward();
+//        list.displayBackward();
+//
+//        IntFunction<String> dowork =(x)-> Integer.valueOf(x).toString();
+//        dowork.apply(10);
 
-        System.out.println("=== Doubly Linked List Demo ===\n");
+//        List<Employee> employeeList = new ArrayList<>();
+//        employeeList.add(new Employee("Jane", "Jones", 123));
+//        employeeList.add(new Employee("John", "Doe", 4567));
+//        employeeList.add(new Employee("Mary", "Smith", 22));
+//        employeeList.add(new Employee("Mike", "Wilson", 3245));
+//
+////        employeeList.forEach(employee -> System.out.println(employee));
+////
+////        System.out.println(employeeList.get(1));
+////
+////        System.out.println(employeeList.isEmpty());
+//
+//        employeeList.set(1, new Employee("John", "Adams", 4568));
+//        //employeeList.forEach(employee -> System.out.println(employee));
+//
+//        //System.out.println(employeeList.size());
+//
+//        employeeList.add(3, new Employee("John", "Doe", 4567));
+//        //employeeList.forEach(employee -> System.out.println(employee));
+//
+////        Employee[] employeeArray = employeeList.toArray(new Employee[employeeList.size()]);
+////        for (Employee employee: employeeArray) {
+////            System.out.println(employee);
+////        }
+//
+//        System.out.println(employeeList.contains(new Employee("Mary", "Smith", 22)));
+//        System.out.println(employeeList.indexOf(new Employee("John", "Doe", 4567)));
+//
+//        employeeList.remove(2);
+//        employeeList.forEach(employee -> System.out.println(employee));
+//
+//        List<Employee> employeeList = new Vector<>();
+//        employeeList.add(new Employee("Jane", "Jones", 123));
+//        employeeList.add(new Employee("John", "Doe", 4567));
+//        employeeList.add(new Employee("Mary", "Smith", 22));
+//        employeeList.add(new Employee("Mike", "Wilson", 3245));
 
-        // Append operations
-        list.append(10);
-        list.append(20);
-        list.append(30);
-        list.displayForward();
-        list.displayBackward();
+        Employee janeJones = new Employee("Jane", "Jones", 123);
+        Employee johnDoe = new Employee("John", "Doe", 4567);
+        Employee marySmith = new Employee("Mary", "Smith", 22);
+        Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
 
-        System.out.println();
+        EmployeeLinkedList list = new EmployeeLinkedList();
 
-        // Prepend operations
-        list.prepend(5);
-        list.prepend(1);
-        list.displayForward();
-        list.displayBackward();
+        System.out.println(list.isEmpty());
 
-        System.out.println();
+        list.addToFront(janeJones);
+        list.addToFront(johnDoe);
+        list.addToFront(marySmith);
+        list.addToFront(mikeWilson);
 
-        // Insert after
-        list.insertAfter(20, 25);
-        list.displayForward();
+        System.out.println(list.getSize());
 
-        System.out.println();
+        list.printList();
 
-        // Delete operation
-        list.delete(20);
-        list.displayForward();
-        list.displayBackward();
+        list.removeFromFront();
+        System.out.println(list.getSize());
+        list.printList();
 
-        IntFunction<String> dowork =(x)-> Integer.valueOf(x).toString();
-        dowork.apply(10);
     }
 
     private void dummy(){

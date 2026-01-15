@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0e1f6b-f5d7-4f89-9c46-f21a79bb8f17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/CountingSortClaude.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/MergeSortClaude.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/QuickSortClaude.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/RadixSortClaude.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/bubblesortpcgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/challenge1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/challenge2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/challenge3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/countingsortpcgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/insertionsortpcgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/mergesortpcgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/radixsortpcgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/recursionpcgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/selectionsortpcgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/shellsortpcgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/algo/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/EmployeeLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/collections/EmployeeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pcgs/core/java/pocs/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "Application.BinarySearch.executor": "Run",
     "Application.BinarySearchTree.executor": "Run",
     "Application.CollectorArchitectureDemo.executor": "Run",
