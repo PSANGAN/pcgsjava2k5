@@ -23,5 +23,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.11</version> <!-- Use the latest version from Maven Repository -->
+    </dependency>
   </dependencies>
 </project>

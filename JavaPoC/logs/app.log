@@ -1,0 +1,16 @@
+2026-03-14 18:37:27.425 INFO  c.pcgs.core.java.pocs.logging.SlforJ - An INFO message
+2026-03-14 18:37:27.432 WARN  c.pcgs.core.java.pocs.logging.SlforJ - A WARN message
+2026-03-14 18:37:27.432 ERROR c.pcgs.core.java.pocs.logging.SlforJ - An ERROR message
+2026-03-14 18:38:55.478 INFO  c.pcgs.core.java.pocs.logging.SlforJ - An INFO message
+2026-03-14 18:38:55.481 WARN  c.pcgs.core.java.pocs.logging.SlforJ - A WARN message
+2026-03-14 18:38:55.482 ERROR c.pcgs.core.java.pocs.logging.SlforJ - An ERROR message
+2026-03-14 21:32:33.266 ERROR c.pcgs.core.java.pocs.logging.SlforJ - An ERROR message
+2026-03-14 21:32:33.269 INFO  c.p.c.j.p.l.subpackage.UtliCala - A INFO MSG!
+2026-03-14 21:32:33.271 WARN  c.p.c.java.pocs.logging.SimpleClass - A WARN MSG!
+2026-03-14 21:36:10.165 ERROR c.pcgs.core.java.pocs.logging.SlforJ - An ERROR message
+2026-03-14 21:36:10.166 INFO  c.p.c.j.p.l.subpackage.UtliCala - A INFO MSG!
+2026-03-14 21:36:10.167 WARN  c.p.c.java.pocs.logging.SimpleClass - A WARN MSG!
+2026-03-14 21:36:45.298 ERROR c.pcgs.core.java.pocs.logging.SlforJ - An ERROR message
+2026-03-14 21:36:45.301 INFO  c.p.c.j.p.l.subpackage.UtliCala - A INFO MSG!
+2026-03-14 21:36:45.302 WARN  c.p.c.java.pocs.logging.SimpleClass - A WARN MSG!
+2026-03-14 21:37:37.579 ERROR c.pcgs.core.java.pocs.logging.SlforJ - An ERROR message
